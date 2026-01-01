@@ -1,4 +1,3 @@
-
 package ru.avito.feedpro
 
 import android.app.Application

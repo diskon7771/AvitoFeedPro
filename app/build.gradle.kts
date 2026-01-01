@@ -1,8 +1,8 @@
 plugins {
     id("com.android.application")
-    kotlin("android")
-    kotlin("kapt")
-    id("org.jetbrains.kotlin.plugin.compose")
+    id("org.jetbrains.kotlin.android")
+    id("org.jetbrains.kotlin.kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -32,7 +32,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = "1.5.14"
     }
 
     kotlinOptions {
@@ -47,13 +47,13 @@ android {
 
 dependencies {
 
-    // Core
+    // Android core
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.appcompat:appcompat:1.7.0")
-    implementation("androidx.activity:activity-compose:1.9.0")
+    implementation("androidx.activity:activity-compose:1.9.2")
 
     // Compose
-    implementation("androidx.compose.ui:ui:1.6.7")
+    implementation("androidx.compose.ui:ui:1.6.8")
     implementation("androidx.compose.material3:material3:1.2.1")
     implementation("androidx.navigation:navigation-compose:2.8.0")
 
@@ -64,9 +64,10 @@ dependencies {
 
     // Network
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
 
-    // Data
+    // DataStore
     implementation("androidx.datastore:datastore-preferences:1.1.1")
 
     // Images
