@@ -55,12 +55,16 @@ dependencies {
     // Compose
     implementation("androidx.compose.ui:ui:1.6.8")
     implementation("androidx.compose.material3:material3:1.2.1")
-    implementation("androidx.navigation:navigation-compose:2.8.0")
+    implementation("androidx.navigation:navigation-compose:2.8.1")
 
     // Hilt
     implementation("com.google.dagger:hilt-android:2.51")
     kapt("com.google.dagger:hilt-compiler:2.51")
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+
+    // FIX: Hilt + Gradle 8.x + JavaPoet crash
+    implementation("com.squareup:javapoet:1.13.0")
+    kapt("com.squareup:javapoet:1.13.0")
 
     // Network
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
